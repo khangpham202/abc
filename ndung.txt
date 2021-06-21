@@ -1,0 +1,48 @@
+restful API
+Jquery
+Ajax
+phân trang
+
+API addEven()
+onclick("id")
+
+$.ajax({
+    url: 
+    type:
+    data
+})
+
+data server
+
+chức năng => database => back-end => API => frontEnd get data => show lên browser
+
+cookies: sẽ được gửi cùng request trên header
+
+xác thực, phân quyền
+    Xác thực: cookie => xác thực user => thực hiện chức năng user yêu cầu
+
+file app mới
+làm đủ 4 chức năng thêm,sửa,xóa,xem user
+đổi mật khẩu checkCookie => id
+getCookie => cookie = id    
+ajax({url:'/api/user/' + id, type: 'PUT', data:{username: , password: , newpass: }})
+
+put(/api/user/:id, username, password, newpass)
+
+updateOne({_id, password, username}, ({password:newpass}))
+
+phân quyền // check đăng nhập là middle ware(bước kiểm tra trung gian trước khi
+                                             cho phép chức năng yêu cầu)
+middle ware => lấy đc role của user để qđịnh có cho thực hiện chức năng hay không
+nếu đúng quyền thì dùng next() và cho thực hiện chức năng
+
+JWT - json web token: tạo ra đoạn mã hóa
+
+bcrypt : mã hóa và so sánh
+         mã hóa password user để ko bị lộ
+
+
+
+async - await :     chuyển code bất đồng bộ thành đồng bộ
+                    dùng thay .then và .catch, call back
+                    dùng trong khối try - catch
