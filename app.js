@@ -11,6 +11,7 @@ const TodoModel = require("./todoModel");
 const TodoRouter = require("./todoRouter")
 const checkAuth = require("./checkAuth");
 const BlackListModel = require("./blackListModel")
+const port = process.env.PORT || 3000;
 
 app.use(cookieParser());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -151,4 +152,4 @@ app.get("/", (req, res) => {
 // });
 
 //tạo cổng nghe
-app.listen(3000);
+app.listen(port);
